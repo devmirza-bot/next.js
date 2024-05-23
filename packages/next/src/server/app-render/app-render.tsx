@@ -624,7 +624,7 @@ function ReactServerEntrypoint<T>({
   nonce?: string
 }): T {
   preinitScripts()
-  const response = useFlightStream(
+  const response = useFlightStream<T>(
     reactServerStream,
     clientReferenceManifest,
     nonce
